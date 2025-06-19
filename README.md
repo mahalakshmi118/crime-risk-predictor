@@ -6,107 +6,120 @@ A psychological trait-based **Crime Risk Prediction System** built with **XGBoos
 
 ## 📌 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Demo](#demo)
-- [How It Works](#how-it-works)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Disclaimer](#disclaimer)
-- [License](#license)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Demo](#-demo)
+- [How It Works](#-how-it-works)
+- [Technologies Used](#-technologies-used)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Disclaimer](#-disclaimer)
+- [License](#-license)
 
 ---
 
 ## 📖 Overview
 
-This project is a machine learning-powered web app that predicts crime risk using psychological traits and demographic features such as:
+This project is a machine learning-powered web application that predicts the **risk of criminal behavior** based on psychological traits and demographic data. It is built using **XGBoost** for classification and **SHAP** for interpretability, with an interactive frontend developed using **Streamlit**.
 
-- Antisocial tendencies
-- Aggression
-- Impulsivity
-- Childhood trauma
-- Education and employment status
+### ✅ Key Features
 
-The model uses **XGBoost** for classification and **SHAP** values for interpreting the model’s predictions.
+- 🔢 Accepts **35+ psychological and demographic traits** as input via sliders and selectors
+- 🤖 Utilizes **XGBoost classifier** for robust and efficient prediction
+- 📊 Provides **probability-based crime risk score** (0% to 100%)
+- 📌 Highlights **top contributing traits** using SHAP values for model transparency
+- 📈 Includes an **Insights** page with:
+  - Trait distribution plots (bar graphs)
+  - Correlation heatmap
+  - Global SHAP summary plot
+- 🧠 Visual explanation of each prediction using **SHAP force plots** and **bar plots**
+- 🔒 Includes **ethical disclaimer** for responsible usage
 
 ---
 
 ## ✅ Features
 
-- 🔢 **Manual Input Form**: Enter traits & demographic data.
-- 📊 **SHAP Visuals**: Understand which features drive risk.
-- 🌐 **Insights Dashboard**: Visualize feature distributions and correlations.
-- 🧠 **Explainable ML**: Shows impact of individual traits.
-- 🎓 **Educational Tool**: Intended for psychological, criminology, or ML research purposes.
+- 🔢 **Manual Input Form**: Enter traits & demographic data
+- 📊 **SHAP Visuals**: Understand which features drive risk
+- 🌐 **Insights Dashboard**: Visualize feature distributions and correlations
+- 🧠 **Explainable ML**: Shows impact of individual traits
+- 🎓 **Educational Tool**: For psychology, criminology, or ML research
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python 🐍
-- Streamlit 📺 (for web app UI)
-- XGBoost 🌲 (classification model)
-- SHAP 🧠 (explainable AI)
-- Pandas, Matplotlib, Seaborn 📈 (data analysis & visualization)
+- **Python**
+- **Streamlit** – Web app UI
+- **XGBoost** – Classification model
+- **SHAP** – Explainable AI
+- **Pandas**, **Matplotlib**, **Seaborn** – Data analysis & visualization
 
 ---
 
 ## 🚀 Demo
 
-You can run the app locally or deploy on [Streamlit Cloud](https://streamlit.io/cloud).
+You can run the app locally or deploy it on [Streamlit Cloud](https://streamlit.io/cloud).
 
 ---
 
 ## 🔧 Installation
 
-1. **Clone the repo**:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/mahalakshmi118/crime-risk-predictor.git
 cd crime-risk-predictor
+```
 
-2. **Create and activate a virtual environment (optional but recommended)**:
+### 2. (Optional) Create and activate a virtual environment
 
 ```bash
-Copy
-Edit
 python -m venv venv
 venv\Scripts\activate   # On Windows
+```
 
-3. **Install dependencies**:
+### 3. Install dependencies
 
 ```bash
-Copy
-Edit
 pip install -r requirements.txt
+```
 
-4. **Run the Streamlit app**:
+### 4. Run the Streamlit app
 
 ```bash
-Copy
-Edit
 streamlit run app.py
+```
+
+---
 
 ## 📁 Project Structure
 
+```
 crime-risk-predictor/
 │
-├── artifacts/               # Saved models and datasets
+├── crime.ipynb               # Development notebook
+├── app.py                    # Main Streamlit app
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+├── artifacts/                # Saved models and datasets
 │   ├── xgb_model.pkl
 │   ├── X.pkl
 │   ├── X_test.pkl
 │   └── y_test.pkl
-│
-├── app.py                   # Main Streamlit app
-├── requirements.txt         # Dependencies
-└── README.md                # Project documentation
+```
 
-⚠️ Disclaimer
-This project is for educational purposes only.
+---
 
-It is not intended or suitable for real-world judicial, medical, or behavioral assessment use. Psychological trait data can be subjective and highly sensitive.
+## ⚠️ Disclaimer
 
-📄 License
-MIT License
+This project is for **educational purposes only**.  
+It is **not intended** for real-world judicial, behavioral, or psychological assessment.  
+Trait-based profiling can be **subjective and sensitive** — use responsibly and ethically.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
 Feel free to use, modify, and share with attribution.
